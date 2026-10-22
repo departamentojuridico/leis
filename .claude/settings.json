@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Read(./**)",
+      "Grep",
+      "Glob",
+      "Bash(ls:*)",
+      "Bash(wc:*)",
+      "Bash(head:*)",
+      "Bash(rg:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git show:*)",
+      "Bash(python3 -I -m unittest discover -s scripts -p test_vigencia.py)",
+      "Bash(python3 -I scripts/converter_constituicao.py --check)"
+    ],
+    "deny": [
+      "Bash(git add -A:*)",
+      "Bash(git add .:*)",
+      "Bash(git push --force:*)",
+      "Bash(git push -f:*)",
+      "Bash(git gc:*)",
+      "Bash(git filter-branch:*)",
+      "Bash(git rebase:*)",
+      "Bash(rm -rf:*)",
+      "Read(./.git/**)"
+    ]
+  }
+}
